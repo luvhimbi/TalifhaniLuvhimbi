@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+        <!-- Primary SEO -->
+        <title>Talifhani Luvhimbi — Web Developer · Responsive Websites & Web Apps</title>
+        <meta name="description" content="Talifhani Luvhimbi — Web developer building modern, accessible, high-performance responsive websites and web applications. Available for freelance and contract work in Johannesburg." />
+        <meta name="author" content="Talifhani Luvhimbi" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://yourdomain.com/" /> <!-- replace with your real site URL -->
+        <link rel="alternate" hreflang="en" href="https://yourdomain.com/" /> <!-- replace with real URL -->
+
+        <!-- Open Graph -->
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Talifhani Luvhimbi — Web Developer" />
+        <meta property="og:description" content="Modern, accessible, responsive websites and web applications. Freelance/contract available." />
+        <meta property="og:url" content="https://yourdomain.com/" />
+        <meta property="og:site_name" content="Talifhani Luvhimbi" />
+        <meta property="og:image" content="https://yourdomain.com/images/profile-social.jpg" /> <!-- use a social preview image -->
+        <meta property="og:image:alt" content="Talifhani Luvhimbi — Web Developer" />
+
+      
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+       
+        <!-- Tailwind CDN -->
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <link rel="stylesheet" href="styles.css" />
+        <!-- Structured data (JSON-LD). Update URLs and social profiles. -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Person",
+                "name": "Talifhani Luvhimbi",
+                "url": "https://yourdomain.com/",
+                "email": "mailto:talifhaniluvhimbi@gmail.com",
+                "jobTitle": "Web Developer",
+                "image": "https://yourdomain.com/images/profile.jpg",
+                "sameAs": [
+                    "https://github.com/luvhimbi",
+                    "https://www.linkedin.com/in/talifhani-luvhimbi-926897231/"
+                ],
+                "address": {
+                    "@type": "1921 ngungunyane street",
+                    "addressLocality": "Johannesburg",
+                    "addressRegion": "Gauteng",
+                    "addressCountry": "ZA"
+                }
+            }
+        </script>
+    </head>
+
+    <body class="min-h-screen flex flex-col">
+        <!-- Header -->
+        <header class="bg-black/80 backdrop-blur-sm sticky top-0 z-40 border-b border-neutral-800">
+            <div class="max-w-6xl mx-auto px-5 py-4 flex items-center justify-between">
+                <a href="/" class="flex items-center gap-3" aria-label="Talifhani Luvhimbi — Home">
+                    <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden="true" class="text-slate-100">
+                        <rect x="2" y="2" width="20" height="20" rx="6" fill="currentColor"></rect>
+                        <path d="M7 12h10" stroke="#0b0b0b" stroke-width="1.5" stroke-linecap="round"></path>
+                    </svg>
+                    <span class="font-bold text-xl text-slate-100">Talifhani Luvhimbi</span>
+                </a>
+
+                <nav class="hidden md:flex items-center gap-6" aria-label="Primary">
+                    <a href="#projects" class="text-sm font-medium text-slate-200 hover:text-white focus:outline-none focus:ring-2 focus:ring-white/20 rounded">Projects</a>
+                    <a href="#services" class="text-sm font-medium text-slate-200 hover:text-white focus:outline-none focus:ring-2 focus:ring-white/20 rounded">Services</a>
+                    <a href="#contact" class="text-sm font-medium text-slate-200 hover:text-white focus:outline-none focus:ring-2 focus:ring-white/20 rounded">Contact</a>
+                    <a href="#contact" class="btn ml-2">Hire Me</a>
+                </nav>
+
+                <!-- Mobile menu button -->
+                <button id="menuBtn" aria-expanded="false" aria-controls="mobileNav" class="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-white/20 bg-transparent text-slate-100 hover:bg-slate-800">
+                    <svg id="menuIcon" width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true" class="menu-icon text-slate-100">
+                        <!-- hamburger group -->
+                        <g id="hamburger">
+                            <path d="M4 7h16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+                            <path d="M4 12h16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+                            <path d="M4 17h16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+                        </g>
+                        <!-- close (X) group, hidden by default -->
+                        <g id="close" class="hidden">
+                            <path d="M6 6l12 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+                            <path d="M6 18L18 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+                        </g>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile nav -->
+            <div id="mobileNav" class="md:hidden hidden border-t bg-black/95 border-neutral-800">
+                <div class="px-5 py-4 flex flex-col gap-3">
+                    <a href="#projects" class="py-2 rounded text-sm font-medium text-slate-200 hover:bg-slate-800 px-2">Projects</a>
+                    <a href="#services" class="py-2 rounded text-sm font-medium text-slate-200 hover:bg-slate-800 px-2">Services</a>
+                    <a href="#contact" class="py-2 rounded text-sm font-medium text-slate-200 hover:bg-slate-800 px-2">Contact</a>
+                    <a href="#contact" class="btn mt-2">Hire Me</a>
+                </div>
+            </div>
+        </header>
+
+        <main class="flex-1">
+            <!-- Hero -->
+            <section class="bg-gradient-to-b from-slate-900 to-transparent py-20">
+                <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-2 gap-10 items-center">
+                    <div>
+                        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4 text-slate-100">Hi, I'm Talifhani Luvhimbi</h1>
+                        <p class="text-lg text-slate-300 mb-6">I build modern, accessible, responsive websites and web applications that solve real problems.</p>
+                        <div class="flex gap-3">
+                            <a href="#projects" class="btn">View Projects</a>
+                            <a href="#contact" class="py-2 px-4 rounded-md border border-neutral-700 hover:bg-slate-800 text-sm font-medium text-slate-200">Let's Talk</a>
+                        </div>
+                        <ul class="mt-6 flex flex-wrap gap-3 text-sm text-slate-400">
+                            <li class="inline-flex items-center gap-2"><strong>Specialties:</strong></li>
+                            <li>Responsive UI</li>
+                            <li>Backend APIs</li>
+                            <li>Performance</li>
+                            <li>Accessibility</li>
+                        </ul>
+                    </div>
+
+                    <div class="flex justify-center md:justify-end"></div>
+                        <!-- Profile picture: replace with high-quality social preview at /images/profile-social.jpg -->
+                        <img src="Me.jpg" alt="Portrait of Talifhani Luvhimbi, Web Developer" class="rounded-2xl shadow-lg w-72 h-72 object-cover border border-neutral-800" width="288" height="288" loading="lazy" />
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects -->
+            <section id="projects" class="max-w-6xl mx-auto px-5 py-16">
+                <h2 class="text-3xl font-bold text-center mb-10 text-slate-100">Selected Projects</h2>
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <article class="card" aria-labelledby="proj1">
+                        <h3 id="proj1" class="text-xl font-semibold mb-2">Online Store</h3>
+                        <p class="text-slate-300 mb-4">Responsive e-commerce site with cart, checkout, and admin management (PHP, MySQL, Tailwind).</p>
+                        <a href="https://github.com/yourusername/onlinestore" target="_blank" rel="noopener" class="text-sm font-medium text-slate-200 hover:underline">View on GitHub</a>
+                    </article>
+
+                    <article class="card" aria-labelledby="proj2">
+                        <h3 id="proj2" class="text-xl font-semibold mb-2">Portfolio Website</h3>
+                        <p class="text-slate-300 mb-4">This portfolio — small, fast, and accessible. Built with semantic HTML and Tailwind CSS.</p>
+                        <a href="https://github.com/yourusername/portfolio" target="_blank" rel="noopener" class="text-sm font-medium text-slate-200 hover:underline">View on GitHub</a>
+                    </article>
+
+                    <article class="card" aria-labelledby="proj3">
+                        <h3 id="proj3" class="text-xl font-semibold mb-2">Blog Platform</h3>
+                        <p class="text-slate-300 mb-4">Multi-author blog with admin panel, post editor, and comments (Laravel).</p>
+                        <a href="https://github.com/yourusername/blogplatform" target="_blank" rel="noopener" class="text-sm font-medium text-slate-200 hover:underline">View on GitHub</a>
+                    </article>
+
+                    <article class="card" aria-labelledby="proj4">
+                        <h3 id="proj4" class="text-xl font-semibold mb-2">Task Manager App</h3>
+                        <p class="text-slate-300 mb-4">Real-time task management with WebSockets, collaborative editing, and offline support (React, Node.js).</p>
+                        <a href="https://github.com/yourusername/task-manager" target="_blank" rel="noopener" class="text-sm font-medium text-slate-200 hover:underline">View on GitHub</a>
+                    </article>
+
+                    <article class="card" aria-labelledby="proj5">
+                        <h3 id="proj5" class="text-xl font-semibold mb-2">Analytics Dashboard</h3>
+                        <p class="text-slate-300 mb-4">Interactive dashboards, charts, and export features for business insights (Vue, D3, Express).</p>
+                        <a href="https://github.com/yourusername/analytics-dashboard" target="_blank" rel="noopener" class="text-sm font-medium text-slate-200 hover:underline">View on GitHub</a>
+                    </article>
+
+                    <article class="card" aria-labelledby="proj6">
+                        <h3 id="proj6" class="text-xl font-semibold mb-2">Booking System</h3>
+                        <p class="text-slate-300 mb-4">End-to-end booking workflow with availability, payments, and notifications (Django, Stripe).</p>
+                        <a href="https://github.com/yourusername/booking-system" target="_blank" rel="noopener" class="text-sm font-medium text-slate-200 hover:underline">View on GitHub</a>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Services -->
+            <section id="services" class="bg-transparent py-16">
+                <div class="max-w-6xl mx-auto px-5 text-center">
+                    <h2 class="text-3xl font-bold mb-8 text-slate-100">Services</h2>
+                    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div class="card text-left">
+                            <h4 class="font-semibold mb-2">Web Development</h4>
+                            <p class="text-slate-300">Responsive, SEO-friendly interfaces using modern tooling and best practices.</p>
+                        </div>
+                        <div class="card text-left">
+                            <h4 class="font-semibold mb-2">Backend Development</h4>
+                            <p class="text-slate-300">APIs, authentication, and data modeling using PHP, Laravel or Java backends.</p>
+                        </div>
+                        <div class="card text-left">
+                            <h4 class="font-semibold mb-2">Consulting</h4>
+                            <p class="text-slate-300">Product planning, architecture reviews and performance/accessibility audits.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact (replaced form with direct contact details) -->
+            <section id="contact" class="max-w-3xl mx-auto px-5 py-16">
+                <h2 class="text-3xl font-bold text-center mb-8 text-slate-100">Get in touch</h2>
+
+                <div class="card mx-auto">
+                    <p class="text-slate-300 mb-4">I'm available for freelance projects and contract work. Reach out using any of the methods below.</p>
+
+                    <ul class="space-y-3 text-slate-200">
+                        <li class="flex items-center gap-3">
+                            <strong class="w-24">Email</strong>
+                            <a class="text-slate-200 hover:underline" href="mailto:talifhaniluvhimbi@gmail.com">talifhaniluvhimbi@gmail.com</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <strong class="w-24">Phone</strong>
+                            <a class="text-slate-200 hover:underline" href="tel:+27724223692">0724223692</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <strong class="w-24">Location</strong>
+                            <span class="text-slate-300">Johannesburg, Gauteng</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <strong class="w-24">GitHub</strong>
+                            <a class="text-slate-200 hover:underline" href="https://github.com/luvhimbi" target="_blank" rel="noopener">github.com/luvhimbi</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <strong class="w-24">LinkedIn</strong>
+                            <a class="text-slate-200 hover:underline" href="https://www.linkedin.com/in/talifhani-luvhimbi-926897231/" target="_blank" rel="noopener">linkedin.com/in/TalifhaniLuvhimbi</a>
+                        </li>
+                    </ul>
+
+                    <div class="mt-6">
+                        <a href="mailto:talifhaniluvhimbi@gmail.com" class="btn">Email Me</a>
+                        <a href="#projects" class="ml-3 text-sm font-medium text-slate-200 hover:underline">See projects</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="bg-transparent border-t border-neutral-800">
+            <div class="max-w-6xl mx-auto px-5 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="text-sm text-slate-400">&copy; 2025 Talifhani Luvhimbi. All rights reserved.</p>
+                <div class="flex gap-3">
+                    <a href="https://github.com/luvhimbi" class="text-sm text-slate-400 hover:text-white">GitHub</a>
+                    <a href="https://www.linkedin.com/in/talifhani-luvhimbi-926897231/" class="text-sm text-slate-400 hover:text-white">LinkedIn</a>
+                    <a href="mailto:talifhaniluvhimbi@gmail.com" class="text-sm text-slate-400 hover:text-white">Email</a>
+                </div>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>
