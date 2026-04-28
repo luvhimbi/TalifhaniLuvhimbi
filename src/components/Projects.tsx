@@ -40,8 +40,16 @@ const uxProjects: Project[] = [
 
 const appProjects: Project[] = [
     {
-        title: "Venda Learn",
-        description: "A comprehensive Tshivenda learning application. Master the language through gamified lessons, interactive stories, and real-time practice with native speakers.",
+        title: "Thoughts",
+        description: "A journaling application for people to write their thoughts, vent, and release.",
+        tags: ["React", "Vite", "PWA"],
+        image: "/images/thoughts.png",
+        liveLink: "https://thoughts-journaling.vercel.app/",
+        githubLink: "#"
+    },
+    {
+        title: "Chommie Companion",
+        description: "A language learning application which teaches people to learn 11 South African languages.",
         tags: ["React", "Vite", "Firebase", "Bootstrap"],
         image: "/images/vendalearn.png",
         liveLink: "https://venda-learn.vercel.app/",
